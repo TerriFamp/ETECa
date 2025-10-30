@@ -31,7 +31,7 @@ public static java.sql.Connection getConexaoMySQL(){
         
         String serverName = "localhost";//caminho do servidor do BD
      
-        String mydatabase = "matricula";//caminho do seu banco de dados
+        String mydatabase = "minitcc";//caminho do seu banco de dados
         
         String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
         

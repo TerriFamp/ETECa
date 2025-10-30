@@ -51,7 +51,7 @@ public final class backtest_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <title>JSP Page</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
-      out.write("        <form action=\"../UsuarioSERVLET\" method=\"GET\">\n");
+      out.write("        <form action=\"UsuarioSERVLET\" method=\"GET\">\n");
       out.write("            <label> Seu Nome </label> <br>\n");
       out.write("            <input type=\"text\" name=\"Nome\"><br>\n");
       out.write("            <label> ID </label> <br>\n");

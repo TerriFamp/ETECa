@@ -12,7 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="../UsuarioSERVLET" method="GET">
+        <form action="UsuarioSERVLET" method="GET">
             <label> Seu Nome </label> <br>
             <input type="text" name="Nome"><br>
             <label> ID </label> <br>

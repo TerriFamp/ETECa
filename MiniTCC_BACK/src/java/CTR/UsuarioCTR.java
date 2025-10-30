@@ -17,9 +17,9 @@ import java.util.List;
  */
 public class UsuarioCTR {
     
-        public void insereUsuario(String Nome,int idUsuario,String Email,String Tipo, String Telefone) {
+        public void insereUsuario(String Nome,int IdUsuario,String Email,String Tipo, String Telefone) {
         UsuarioMODEL gs = new UsuarioMODEL();
-        gs.setidUsuario(idUsuario); //Joga na classe MODEL
+        gs.setIdUsuario(IdUsuario); //Joga na classe MODEL
         gs.setNome(Nome);
         gs.setEmail(Email);
         gs.setTelefone(Telefone);

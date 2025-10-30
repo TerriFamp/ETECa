@@ -10,24 +10,24 @@ package MODEL;
  * @author Alunos
  */
 public class UsuarioMODEL {
-    private int idUsuario;
+    private int IdUsuario;
     private String nome;
     private String email;
     private String telefone;
     private String tipo;
 
     /**
-     * @return the idUsuario
+     * @return the IdUsuario
      */
-    public int getidUsuario() {
-        return idUsuario;
+    public int getIdUsuario() {
+        return IdUsuario;
     }
 
     /**
-     * @param idUsuario the idUsuario to set
+     * @param IdUsuario the IdUsuario to set
      */
-    public void setidUsuario(int idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setIdUsuario(int IdUsuario) {
+        this.IdUsuario = IdUsuario;
     }
 
     /**

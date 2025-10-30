@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alunos
  */
-@WebServlet(name = "NewServlet", urlPatterns = {"/NewServlet"})
+@WebServlet(name = "UsuarioSERVLET", urlPatterns = {"/UsuarioSERVLET"})
 public class UsuarioSERVLET extends HttpServlet {
 
     /**
@@ -32,30 +32,16 @@ public class UsuarioSERVLET extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
       
-        response.setContentType("text/html;charset=UTF-8");
-                response.setContentType("text/html;charset=UTF-8");
      String Tipo = request.getParameter("Data"); 
      String Email = request.getParameter("Data");
       String Nome = request.getParameter("Data"); 
        String Telefone = request.getParameter("Data"); 
-     int idUsuario  = Integer.parseInt(request.getParameter("idUsuario")); 
+     int IdUsuario  = Integer.parseInt(request.getParameter("idUsuario")); 
      
      UsuarioCTR objProf = new UsuarioCTR();
-     objProf.insereUsuario(Nome,idUsuario,Email,Tipo,Telefone);
+     objProf.insereUsuario(Nome,IdUsuario,Email,Tipo,Telefone);
         //response.sendRedirect("/VIEW/UsuarioVIEW/teste.jsp");
         
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet EnderoSERVLET</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet EnderoSERVLET at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
-        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

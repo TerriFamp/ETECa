@@ -28,12 +28,12 @@ public class UsuarioDAO {
         ConexaoDAO cb = new ConexaoDAO();
         con = (cb.getConexaoMySQL());
 
-        String sql = "insert into Usuario (Nome,idUsuario,Email,Tipo,Telefone) values(?,?,?,?,?)";
+        String sql = "insert into Usuario (Nome,IdUsuario,Email,Tipo,Telefone) values(?,?,?,?,?)";
 
         try {
             mysql = con.prepareStatement(sql);
             mysql.setString(1, gs.getNome());
-            mysql.setInt(2,gs.getidUsuario());
+            mysql.setInt(2,gs.getIdUsuario());
             mysql.setString(3,gs.getEmail());
             mysql.setString(4,gs.getTipo());
             mysql.setString(5,gs.getTelefone());
