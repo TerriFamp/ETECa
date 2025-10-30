@@ -2,12 +2,12 @@
 <html lang="pt-br">
 
 <head>
-  <link rel="shortcut icon" type="image/png" href="img/logo.png">
+  <link rel="shortcut icon" type="image/png" href="../img/logo.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Denúncia de Maus-Tratos a Animais</title>
-  <link rel="stylesheet" href="estilo/index.css" />
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="../estilo/index.css" />
+  <script defer src="../estilo/script.js"></script>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
       Faça sua denúncia de forma segura e anônima.</p>
     </div>
     <div class="banner-imagem">
-      <img src="img/banner.png" alt="Imagem de um cachorro feliz representando proteção animal" />
+      <img src="../img/banner.png" alt="Imagem de um cachorro feliz representando proteção animal" />
     </div>
   </section>
 
@@ -42,7 +42,7 @@
       <p>Nossa missão é ser a ponte entre a justiça e os que não podem se defender: os animais.</p>
     </div>
     <div class="container missao">
-      <img src="img/resgate.webp" alt="Animais felizes" />
+      <img src="../img/resgate.webp" alt="Animais felizes" />
       <div class="texto">
         <p>Somos um projeto social dedicado a receber, encaminhar e acompanhar denúncias de maus-tratos a animais domésticos e silvestres em todo o país. Acreditamos que todos os seres merecem respeito, proteção e uma vida digna.</p>
       </div>
@@ -87,7 +87,7 @@
             <input type="file" id="fotos" name="fotos" multiple accept="image/*" />
           </div>
 
-        <label for="localizacao">Localização:<span aria-hidden="true">*</span></label>
+        <label for="localizacao" id="localmimni">Localização:<span aria-hidden="true">*</span></label>
         <input type="text" id="localizacao" name="localizacao" placeholder="Endereço ou ponto de referência" required
           aria-required="true" />
 
@@ -105,6 +105,14 @@
           <option value="Outros">Outros</option>
         </select>
 
+        <label for="localizacao">E-mail:<span aria-hidden="true">*</span></label>
+        <input type="text" id="e-mail" name="localizacao" placeholder="E-mail" required
+          aria-required="true" />
+
+          <label for="localizacao">Telefone:<span aria-hidden="true">*</span></label>
+        <input type="text" id="telefone" name="localizacao" placeholder="Telefone" required
+          aria-required="true" />
+
         <label for="nome">Deseja se identificar? (Opcional)</label>
         <input type="text" id="nome" name="nome" placeholder="Seu nome" />
 
@@ -112,7 +120,7 @@
           🔒 Suas informações são sigilosas e protegidas. Você pode denunciar de forma anônima.
         </p>
 
-        <button type="submit" class="btn-primary">Enviar Denúncia</button>
+        <button type="submit" class="btn-primary" onclick="alertDenuncia()">Enviar Denúncia</button>
       </form>
       <div id="msg-sucesso" class="msg-sucesso" role="alert" aria-live="polite"></div>
     </section>
@@ -139,23 +147,25 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="container titulo-central">
-      <h2>Dúvidas Frequentes</h2>
-      <p>Tire suas dúvidas antes de denunciar.</p>
+ <!-- FAQ -->
+<section id="faq">
+  <div class="container titulo-central">
+    <h2>Dúvidas Frequentes</h2>
+    <p>Tire suas dúvidas antes de denunciar.</p>
+  </div>
+
+  <div class="container">
+    <div class="faq-item">
+      <div class="faq-question">A denúncia é anônima?</div>
+      <div class="faq-answer">Sim. Nenhum dado pessoal é obrigatório. Você pode denunciar de forma completamente anônima.</div>
     </div>
-    <div class="container">
-      <div class="faq-item">
-        <div class="faq-question">A denúncia é anônima?</div>
-        <div class="faq-answer">Sim. Nenhum dado pessoal é obrigatório. Você pode denunciar de forma completamente anônima.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-question">Para onde vai minha denúncia?</div>
-        <div class="faq-answer">As denúncias são analisadas por nossa equipe e encaminhadas para autoridades competentes da sua região.</div>
-      </div>
+    <div class="faq-item">
+      <div class="faq-question">Para onde vai minha denúncia?</div>
+      <div class="faq-answer">As denúncias são analisadas por nossa equipe e encaminhadas para autoridades competentes da sua região.</div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Modal -->
   <div class="modal" id="modalSucesso">
